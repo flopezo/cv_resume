@@ -1,0 +1,359 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+% \geometry{left=1.25cm, right=1.25cm, top=1.5cm, bottom=1.5cm, columnsep=1.2cm}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm, columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% \ifxetexorluatex
+%   % If using xelatex or lualatex:
+%   \setmainfont{Roboto Slab}
+%   \setsansfont{Lato}
+%   \renewcommand{\familydefault}{\sfdefault}
+% \else
+%   % If using pdflatex:
+%   \usepackage[rm,light]{roboto}
+%   \usepackage[defaultsans]{lato}
+%   \usepackage{sourcesanspro}
+
+%   \renewcommand{\familydefault}{\sfdefault}
+% \fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{ModerateBlue}{HTML}{5d7bc6}
+\definecolor{DarkGrey}{HTML}{2f4f4f}
+\colorlet{name}{ModerateBlue}
+\colorlet{tagline}{DarkGrey}
+\colorlet{heading}{ModerateBlue}
+\colorlet{headingrule}{DarkGrey}
+\colorlet{subheading}{DarkGrey}
+\colorlet{accent}{DarkGrey}
+\colorlet{emphasis}{DarkGrey}
+\colorlet{body}{DarkGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\normalsize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\usepackage{roboto}
+% \renewcommand*{\rmdefault}{roboto}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\normalsize\robotolight}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num.cfg}
+
+%% sample.bib contains your publications
+\addbibresource{publications.bib}
+
+% Suppress hyphens
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\NewInfoField{googlescholar}{\faGraduationCap}[https://scholar.google.com/citations?user=]
+
+\begin{document}
+\name{Federico L\'opez-Osorio}
+\tagline{Bioinformatics | Genomics}
+%% You can add multiple photos on the left or right
+% \photoR{2.8cm}{Globe_High}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  % \mailaddress{Hermannstraße 4, 06108}
+  % \phone{+49 160 3268243}
+  \phone{+00 000 0000000}
+  % \email{flopezo84@gmail.com}
+  \email{f********@gmail.com}
+  % \location{Halle (Saale), Germany}
+  %\homepage{}
+  \github{flopezo}
+  \googlescholar{zOAvFzMAAAAJ}
+  \orcid{0000-0001-7654-7967}
+  \linkedin{federico-lopez-osorio-a46b5754}
+  \twitter{@flopezos}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{\color{ModerateBlue}\faAddressCard Summary}
+I am a biologist with expertise in bioinformatics, genomic analysis, and modern 
+techniques to visualise data. My scientific research focuses on discovering the 
+genetic features underlying traits of interest in insects and other organisms.
+I integrate genome-wide data using reproducible workflows and communicate
+findings to the scientific community, the general public, and stakeholders.
+
+\cvsection{\color{ModerateBlue}\faBusinessTime Experience}
+
+\cvevent{Marie Skłodowska-Curie Actions Fellow}{Queen Mary University of London}{2019 -- 2022}{London, UK}
+\begin{itemize}
+\item Analysed population genomic data to understand the origin of a social supergene in ants
+\item Co-authored a responsive mode research grant proposal successfully funded by 
+the Biotechnology and Biological Sciences Research Council (BBSRC) (ref. BB/T015683/1)
+\item Published research papers in high-impact journals
+\item Actively participated in research projects of graduate students and contributed to their mentoring
+\end{itemize}
+
+\divider
+
+\cvevent{Postdoctoral researcher}{Queen Mary University of London}{2018 -- 2019}{London, UK}
+\begin{itemize}
+\item Analysed hundreds of RNA-seq samples of bees to investigate the effects of exposure to various insecticides
+\item Wrote shell and R scripts to identify differentially expressed genes and visualise results
+\item Disseminated findings in poster format at an international conference
+\item Assisted graduate students in their research projects 
+\end{itemize}
+
+\divider
+
+\cvevent{Gerstner Scholars Program (Biology) Fellow}{American Museum of Natural History}{2016 -- 2018}{New York, NY, USA}
+\begin{itemize}
+\item Designed, managed, and developed a comparative genomics study of social wasps
+\item Collected field samples and sequenced genomes and transcriptomes of wasp species
+\item Developed bioinformatics workflows for \textit{de novo} assembly of genomes and transcriptomes,
+annotating genomes, finding differentially expressed genes, orthology inference, and phylogenomics 
+\item Presented findings in talks at international conferences
+\item Wrote progress and final reports
+\end{itemize}
+
+% \cvsection{Projects}
+
+% \cvevent{Project 1}{Funding agency/institution}{}{}
+% \begin{itemize}
+% \item Details
+% \end{itemize}
+
+% \divider
+
+% \cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+% A short abstract would also work.
+
+% \medskip
+
+% \cvsection{Bioinformatics competencies}
+
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{1.0cm}{%
+%   25/10em/accent!40/{Genomics: genome and transcriptome assembly, predicting gene structures...},
+%   15/10em/accent!30/{Metagenomics: taxonomic labeling of DNA sequences},
+%   20/14em/accent!60/{RNA-seq: detecting differentially expressed genes},
+%   15/8em/accent!20/{Population genomics: identifying SNPs associated with phenotypes...},
+%   25/8em/accent/{Phylogenomics: orthology inference, phylogenetic analysis}
+% }
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+% \cvsection{\color{ModerateBlue}\faFile* Publications}
+\cvsection{\color{ModerateBlue}\faFile Publications}
+
+%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+\mynames{López-Osorio/Federico}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Book Chapters}},type=book]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+% \cvsection{}
+
+% \begin{quote}
+% ``''
+% \end{quote}
+
+\cvsection{\color{ModerateBlue}\faUniversity Education}
+
+\cvevent{Ph.D.\ in Biology}{University of Vermont}{Aug. 2010 -- May 2016}{}
+Dissertation: Phylogenetics and molecular evolution of highly eusocial wasps
+
+\divider
+
+\cvevent{B.Sc.\ in Biology}{Universidad Industrial de Santander}{2009}{}
+% Thesis: A phylogenetic approach to conserving Amazonian biodiversity
+
+\cvsection{\color{ModerateBlue}\faCog Skills}
+
+% \setlist[itemize]{noitemsep, topsep=0pt}
+\setlist{leftmargin=-4mm, noitemsep, topsep=0pt}
+
+\cvachievement{\raisebox{2.0\height}{\color{ModerateBlue}\faLaptopCode}}{Bioinformatics}{
+\begin{itemize}%[label={}]
+\setlength\itemsep{0em}
+\item Analysis of high-throughput genomic data
+\item Quality control of genome-scale assays
+\item Genome and transcriptome assembly, including non-model organisms
+\item Structural and functional genome  annotation
+\item Orthology inference and phylogenomics
+\item Differential gene expression and transcript usage (RNA-seq)
+\item Variant calling and analysis
+\item Metagenome assembly and taxonomic profiling
+\end{itemize}
+}\vspace*{-\baselineskip}
+
+\divider
+
+\cvachievement{\raisebox{2.0\height}{\color{ModerateBlue}\faChartArea}}{Data Analysis}{
+\begin{itemize}%[label={}]
+\setlength\itemsep{0em}
+\item Data visualisation (e.g., ggplot2)
+\item Linear models (e.g., GLM, GLMM)
+\item Data normalisation and transformation
+\item Unsupervised learning (e.g., PCA)
+\item Experimental design
+\item Effective reporting with aesthetic appeal
+\end{itemize}}\vspace*{-\baselineskip}
+
+\divider
+
+\cvachievement{\raisebox{2.0\height}{\color{ModerateBlue}\faCode}}{Programming}{
+% \cvtag{R} \cvtag{Shell} \cvtag{Python}
+\begin{itemize}%[label={}]
+\setlength\itemsep{0em}
+\item R, Tidyverse, Shiny
+\item Shell scripting
+\item Unix systems, high-performance computing
+\item git, GitHub
+\item LaTeX, R Markdown, Quarto
+\item Workflow management (e.g., Snakemake)
+\item Package management (e.g., Conda)
+\item Python
+\end{itemize}}\vspace*{-\baselineskip}
+
+% \cvsection{Skills}
+
+% \cvtag{Hard-working}
+% \cvtag{Eye for detail}\\
+% \cvtag{Motivator \& Leader}
+
+% \divider\smallskip
+
+% \cvtag{C++}
+% \cvtag{Embedded Systems}\\
+% \cvtag{Statistical Analysis}
+
+\cvsection{\color{ModerateBlue}\faLanguage Languages}
+
+English (fluent) | Spanish (native)
+
+% \cvskill{English}{5}
+% \divider
+
+% \cvskill{Spanish}{5}
+% \divider
+
+% \cvskill{German}{3.5} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+% \medskip
+
+% \divider
+
+% \cvsection{References}
+
+% % \cvref{name}{email}{mailing address}
+% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+% {Address Line 1\\Address line 2}
+
+% \divider
+
+% \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+% {Address Line 1\\Address line 2}
+
+
+\end{paracol}
+
+
+\end{document}
